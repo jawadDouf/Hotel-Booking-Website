@@ -1,4 +1,4 @@
-package com.example.hotelbooking;
+package com.example.hotelbooking.controllers;
 
 import java.io.*;
 
