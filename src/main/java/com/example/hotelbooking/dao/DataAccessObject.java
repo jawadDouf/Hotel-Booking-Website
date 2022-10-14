@@ -17,6 +17,8 @@ public abstract class DataAccessObject<T> {
 
     abstract List<T> getAll() throws SQLException ;
 
-    abstract T getOneItem();
+    abstract T getOneItem(int id) throws SQLException;
+
+    abstract void insertRow(T t) throws SQLException;
 
 }
