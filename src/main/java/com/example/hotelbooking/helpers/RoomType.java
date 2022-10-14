@@ -1,7 +1,7 @@
 package com.example.hotelbooking.helpers;
 
 public enum RoomType {
-    Single,
+    Individuelle,
     Double,
     Triple,
     Suite

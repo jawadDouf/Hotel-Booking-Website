@@ -11,12 +11,10 @@ public class Reservation {
     private Client client;
     private double prix_total;
 
-    public Reservation(int id, LocalDate start_date, int nombreDesJours, Chambre chambre, Client client, double prix_total) {
+    public Reservation(int id, LocalDate start_date, int nombreDesJours,double prix_total) {
         this.id = id;
         this.start_date = start_date;
         this.nombreDesJours = nombreDesJours;
-        this.chambre = chambre;
-        this.client = client;
         this.prix_total = prix_total;
     }
 
