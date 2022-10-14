@@ -3,6 +3,9 @@ package com.example.hotelbooking.dao;
 import com.example.hotelbooking.database.Connection;
 
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
 
 public abstract class DataAccessObject<T> {
@@ -12,7 +15,7 @@ public abstract class DataAccessObject<T> {
 
     //Crud Methods
 
-    abstract List<T> getAll();
+    abstract List<T> getAll() throws SQLException ;
 
     abstract T getOneItem();
 
