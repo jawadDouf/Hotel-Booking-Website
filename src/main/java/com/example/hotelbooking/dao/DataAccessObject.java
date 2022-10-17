@@ -21,4 +21,6 @@ public abstract class DataAccessObject<T> {
 
     abstract void insertRow(T t) throws SQLException;
 
+    abstract T getOneItemByEmail(String matricule,String password) throws SQLException;
+
 }
