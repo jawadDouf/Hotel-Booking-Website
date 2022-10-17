@@ -8,7 +8,6 @@
 <%--    <META http-equiv="refresh" content="5;URL=./pages.home.jsp">--%>
 </head>
 <body>
-
 <a href="pages/home.jsp">home</a>
 </body>
 </html>
