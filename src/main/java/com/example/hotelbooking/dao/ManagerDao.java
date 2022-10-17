@@ -22,7 +22,7 @@ public class ManagerDao extends DataAccessObject<Manager> {
 
     }
 
-    @Override
+
     Manager getOneItemByEmail(String matricule, String password) throws SQLException {
         String query = "SELECT * FROM manager where matricule = ?";
         pStmt = con.prepareStatement(query);
