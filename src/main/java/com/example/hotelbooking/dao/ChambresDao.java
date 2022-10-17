@@ -51,8 +51,7 @@ public class ChambresDao extends DataAccessObject<Chambre> {
         pStmt.executeUpdate();
     }
 
-    @Override
-    Chambre getOneItemByEmail(String matricule) throws SQLException {
-        return null;
-    }
+
+
+
 }

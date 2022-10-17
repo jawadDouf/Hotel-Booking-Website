@@ -6,7 +6,7 @@ import com.example.hotelbooking.models.Chambre;
 import com.example.hotelbooking.models.Reservation;
 
 import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Date;
@@ -49,6 +49,18 @@ public class DaoReservation extends DataAccessObject<Reservation> {
 
     @Override
     void insertRow(Reservation reservation) throws SQLException {
+        //The query for inserting the element in the database .
+        String query = "INSERT INTO reservation (start_date,nombres_des_jours,prix_total,room_id,user_id) values (?,?,?,?,?)";
+        //prepare the query
+        pStmt = con.prepareStatement(query);
+        //replace the params
+        pStmt.setDate(1, java.sql.Date.valueOf(reservation.getStart_date()));
+        pStmt.setInt(2, reservation.getNombreDesJours());
+        pStmt.setDouble(3, reservation.getPrix_total());
+        pStmt.setInt(4, reservation.getChambre().getId());
+        pStmt.setInt(5, reservation.getClient().getId());
+        //Insert the element
+        pStmt.executeUpdate();
 
     }
 }
