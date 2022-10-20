@@ -9,7 +9,7 @@ public class Connection {
 
     // Static
     static {
-        String url = "jdbc:mysql://localhost:3306/simplon_clone";
+        String url = "jdbc:mysql://localhost:3306/hotelbooking";
         String user = "root";
         String password = "";
         try{
