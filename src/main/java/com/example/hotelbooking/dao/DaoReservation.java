@@ -21,7 +21,7 @@ public class DaoReservation extends DataAccessObject<Reservation> {
 
 
     @Override
-    List<Reservation> getAll() throws SQLException {
+    public List<Reservation> getAll() throws SQLException {
         List<Reservation> list = new ArrayList<>();
         String query = "SELECT * FROM reservation";
         pStmt = con.prepareStatement(query);
@@ -35,7 +35,7 @@ public class DaoReservation extends DataAccessObject<Reservation> {
     }
 
     @Override
-    Reservation getOneItem(int id) throws SQLException {
+    public Reservation getOneItem(int id) throws SQLException {
 
         String query = "SELECT * FROM reservation WHERE id= ? ";
         pStmt = con.prepareStatement(query);
@@ -48,7 +48,7 @@ public class DaoReservation extends DataAccessObject<Reservation> {
     }
 
     @Override
-    void insertRow(Reservation reservation) throws SQLException {
+    public void insertRow(Reservation reservation) throws SQLException {
         //The query for inserting the element in the database .
         String query = "INSERT INTO reservation (start_date,nombres_des_jours,prix_total,room_id,user_id) values (?,?,?,?,?)";
         //prepare the query
@@ -61,6 +61,5 @@ public class DaoReservation extends DataAccessObject<Reservation> {
         pStmt.setInt(5, reservation.getClient().getId());
         //Insert the element
         pStmt.executeUpdate();
-
     }
 }

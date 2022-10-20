@@ -10,21 +10,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fb960648-45b6-4584-bfc0-cc7d2b13fa13" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/room.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/Hotel_Booking_Website_war.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/Hotel_Booking_Website_war_exploded.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/hotelbooking/controllers/HelloServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/hotelbooking/controllers/HelloServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/hotelbooking/dao/ChambresDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/hotelbooking/dao/ChambresDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/hotelbooking/database/Connection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/hotelbooking/database/Connection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/login.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/hotelbooking/controllers/ReservationServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/hotelbooking/dao/DaoReservation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/hotelbooking/dao/DaoReservation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/home.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/room.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/room.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -301,7 +291,8 @@
       <workItem from="1666117923373" duration="2977000" />
       <workItem from="1666167195947" duration="3176000" />
       <workItem from="1666170718789" duration="12419000" />
-      <workItem from="1666242481482" duration="3322000" />
+      <workItem from="1666242481482" duration="3692000" />
+      <workItem from="1666254095076" duration="21627000" />
     </task>
     <servers />
   </component>
