@@ -13,14 +13,14 @@ public class Chambre {
     private double promotions;
     private Status status;
 
-    public Chambre(int id, RoomType type, double prix, double promotions, Status status) {
-        this.id = id;
-        this.type = type;
-        this.prix = prix;
-        this.promotions = promotions;
-        this.status = status;
+    public Chambre(String type, String prix, String promotions, String status) {
+        this.type = RoomType.valueOf(type);
+        this.prix = Double.parseDouble(prix);
+        this.promotions = Double.parseDouble(promotions);
+        this.status = Status.valueOf(status);
 
     }
+
 
 
 
@@ -65,4 +65,6 @@ public class Chambre {
     public void setStatus(Status status) {
         this.status = status;
     }
+
+
 }

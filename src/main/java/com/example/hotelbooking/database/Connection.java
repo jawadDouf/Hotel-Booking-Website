@@ -9,7 +9,7 @@ public class Connection {
 
     // Static
     static {
-        String url = "jdbc:mysql://localhost:3306/simplon_clone";
+        String url = "jdbc:mysql://localhost:3306/hotelbookings";
         String user = "root";
         String password = "";
         try{
@@ -18,7 +18,7 @@ public class Connection {
             con = DriverManager.getConnection(url,user,password);
 
         }catch (Exception e){
-
+            e.printStackTrace();
         }
 
     }
