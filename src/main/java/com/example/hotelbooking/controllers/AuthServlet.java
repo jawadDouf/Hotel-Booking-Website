@@ -20,15 +20,11 @@ public class AuthServlet extends HttpServlet {
         String matricule = request.getParameter("matricule");
         String password = request.getParameter("password");
         Manager manager = null;
-        try {
-            manager = ManagerDao.getOneItemByEmail(matricule,password);
-        } catch (SQLException throwables) {
-            throwables.printStackTrace();
-        }
+        manager = ManagerDao.getOneItemByEmail(matricule,password);
         if (manager != null){
             HttpSession session = request.getSession();
             session.setAttribute("manager",manager);
-            response.sendRedirect("pages/home.jsp");
+            response.sendRedirect("pages/managerDashboard.jsp");
         }
         else {
             response.sendRedirect("pages/login.jsp");
