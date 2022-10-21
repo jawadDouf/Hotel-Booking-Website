@@ -18,11 +18,14 @@
             <div class="flex justify-center items-center w-1/2">
                 <span class="text-3xl font-bold" >
                     Hello from hotel holiday booking page
+                    ${dateD}
+                    ${dateF}
                 </span>
             </div>
             <div class="flex justify-end w-1/2 absolute right-0">
                 <img class="border-8 border-white border-white h-[500px] w-full" src="https://digital.ihg.com/is/image/ihg/holiday-inn-youngstown-2532030258-4x3" alt="">
             </div>
+
         </div>
         <div class="bg-black w-full h-[30vh]"></div>
     </div>

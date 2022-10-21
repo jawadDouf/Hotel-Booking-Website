@@ -8,6 +8,8 @@
 <%--    <META http-equiv="refresh" content="5;URL=./pages.home.jsp">--%>
 </head>
 <body>
+<%--redirecting to home page --%>
+<jsp:forward page="pages/home.jsp"/>
 <a href="pages/home.jsp">home</a>
 
 

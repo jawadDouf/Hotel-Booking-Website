@@ -3,7 +3,11 @@ package com.example.hotelbooking.dao;
 import com.example.hotelbooking.helpers.RoomType;
 import com.example.hotelbooking.helpers.Status;
 import com.example.hotelbooking.models.Chambre;
+<<<<<<< HEAD
+
+=======
 //import jdk.internal.org.objectweb.asm.Type;
+>>>>>>> master
 
 import javax.management.Query;
 import java.sql.ResultSet;
