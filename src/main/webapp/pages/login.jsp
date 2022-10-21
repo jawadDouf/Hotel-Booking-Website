@@ -10,7 +10,6 @@
 <head>
     <title>login page</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="../style/login.css" rel="stylesheet" type="text/css">
 </head>
 <body>
     <%@ include file="../components/header.jsp" %>
@@ -31,28 +30,35 @@
 <%--                                            />--%>
                                             <h4 class="text-xl font-semibold mt-1 mb-12 pb-1">LOGIN TO YOUR ACCOUNT</h4>
                                         </div>
-                                        <form>
-                                            <p class="mb-4">Please login to your account</p>
+                                        <form action="../AuthServlet" method="post">
+                                            <p class="mb-4">Please login to your account </p>
                                             <div class="mb-4">
                                                 <input
                                                         type="text"
                                                         class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
-                                                        id="exampleFormControlInput1"
-                                                        placeholder="Username"
+                                                        name="matricule"
+                                                        placeholder="Matricule"
+                                                        value=""
                                                 />
                                             </div>
                                             <div class="mb-4">
                                                 <input
                                                         type="password"
                                                         class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+<<<<<<< HEAD
                                                         id="exampleFormControlInput2"
+=======
+                                                        id="exampleFormControlInput1"
+                                                        name="password"
+>>>>>>> master
                                                         placeholder="Password"
+                                                        value=""
                                                 />
                                             </div>
                                             <div class="text-center pt-1 mb-12 pb-1">
                                                 <button
                                                         class="bg-gradient-to-r from-cyan-500 to-blue-500  inline-block px-6 py-2.5 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg transition duration-150 ease-in-out w-full mb-3"
-                                                        type="button"
+                                                        type="submit"
                                                         data-mdb-ripple="true"
                                                         data-mdb-ripple-color="light"
 
@@ -95,6 +101,7 @@
                 </div>
             </div>
         </section>
+
 <%--    </div>--%>
     <%@ include file="../components/footer.jsp" %>
 </body>

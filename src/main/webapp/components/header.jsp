@@ -1,5 +1,5 @@
 <nav>
-    <div class="flex w-full bg-slate-100 justify-between h-[10vh] items-center px-12">
+    <div class="flex w-full bg-slate-100 justify-between h-[10vh] items-center px-12 shadow-b-4">
         <div class="w-72 p-10" ><img src="../images/HOTEL_HOLIDAY-LOGO.png"></div>
         <ul class="flex justify-between w-1/2">
             <li><a href="home.jsp" class=" p-2 hover:bg-cyan-500 rounded hover:text-white">Home</a></li>

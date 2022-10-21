@@ -11,5 +11,8 @@
 <%--redirecting to home page --%>
 <jsp:forward page="pages/home.jsp"/>
 <a href="pages/home.jsp">home</a>
+
+
+
 </body>
 </html>

@@ -11,7 +11,7 @@ import java.util.List;
 public abstract class DataAccessObject<T> {
 
     static java.sql.Connection con = Connection.connect();
-    PreparedStatement pStmt ;
+    static PreparedStatement pStmt ;
 
     //Crud Methods
 
