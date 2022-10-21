@@ -9,7 +9,11 @@ public class Connection {
 
     // Static
     static {
+<<<<<<< HEAD
+        String url = "jdbc:mysql://localhost:3306/hotelbooking";
+=======
         String url = "jdbc:mysql://localhost:3306/hotelbookings";
+>>>>>>> master
         String user = "root";
         String password = "";
         try{
