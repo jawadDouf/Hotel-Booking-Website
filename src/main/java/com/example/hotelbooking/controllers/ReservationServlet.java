@@ -32,14 +32,18 @@ public class ReservationServlet extends HttpServlet {
 
 
         //recieving the data that been send by the user
+        //format the date to parse it
+        String formatedDateD = request.getParameter("dateD").split("/")[2] + "-"+ request.getParameter("dateD").split("/")[0] + "-" + request.getParameter("dateD").split("/")[1];
+        String formatedDateF = request.getParameter("dateF").split("/")[2] + "-"+ request.getParameter("dateF").split("/")[0] + "-"+ request.getParameter("dateF").split("/")[1];
         //we parse the string entered by the user to a local date
-        LocalDate dateD = request.getParameter("dateD") != null ? LocalDate.parse(request.getParameter("dateD")) : null;
-        LocalDate dateF = request.getParameter("dateF") != null ? LocalDate.parse(request.getParameter("dateF")) : null;
-        //
-        double extra = request.getParameter("extra") != null ? Double.parseDouble(request.getParameter("extra")) : null;
-        //Check if all the infos entered by the user is valid
-        if(dateD == (null) || dateF == (null)){
-           // new DaoReservation().insertRow(new Reservation(2,dateD,dateF.minus(dateD),extra));
+        LocalDate dateD = request.getParameter("dateD") != null ? LocalDate.parse(formatedDateD) : null;
+        LocalDate dateF = request.getParameter("dateF") != null ? LocalDate.parse(formatedDateF) : null;
+        //get all the values of the extras selected
+        String[] extras = request.getParameterValues("chosenExtra");
+        //Add to the totla price
+        for (String extra: extras
+             ) {
+            System.out.println(extra);
         }
     }
 }

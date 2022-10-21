@@ -16,7 +16,7 @@
     <script src = "https://code.jquery.com/jquery-1.10.2.js"></script>
     <script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
     <script>
-
+       var selectedDate;
 
         $(function() {
             $( "#datepicker" ).datepicker({
@@ -33,15 +33,18 @@
                       }else {
                         return [true];
                     }
+                },
+                onSelect: function(){
+                     selectedDate = $(this).val();
+
                 }
             });
         });
-        console.log($("#datepicker").val());
+
         // Second Calendar
         $(function () {
             $("#datepicker2").datepicker({
 
-                minDate : $("#datepicker").val()
             });
         });
     </script>
@@ -55,7 +58,7 @@
     <div class="flex m-1 w-[28%]">
         <div class="flex flex-col p-3 w-[100%] border-2 border-black">
             <div class="space-y-3">
-                <form class="relative flex flex-col space-y-4" action="../ReservationServlet" method="Get">
+                <form class="relative flex flex-col space-y-4" action="../ReservationServlet" method="Post">
                     <div class="form-texts flex flex-col space-y-2">
                         <h1 class="text-center text-[26px] font-medium text-black">Reserver cette Chambre</h1>
                         <p class="text-center text-[14px]">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius unde animi minima puezi zeryiur uzriyr a_èàéiz minima puezi zeryiur uzriyr a_èàéiz .</p>
@@ -67,44 +70,44 @@
                     </div>
                     <div class="flex flex-col space-y-2">
                         <label class="text-[18px] pl-1.5">Choisisser un date de fin .</label>
-                        <input type="text" id="datepicker2" name="dateF" placeholder="Date de fin" class="w-full py-2  pl-10 text-sm border-[2px] border-black">
+                        <input type="text"  id="datepicker2" name="dateF" placeholder="Date de fin" class="w-full py-2  pl-10 text-sm border-[2px] border-black">
                     </div>
                     <div class="flex flex-col space-y-2">
                         <p class="text-[18px] pl-1.5">Choisisser des extras : </p>
                         <ul class="w-100 text-sm font-medium bg-white  border-2 border-black">
                             <li class="w-full border-b border-[1px] border-black">
                                 <div class="flex items-center pl-3">
-                                    <input id="vue-checkbox" type="checkbox" value="" class="w-4 h-4  bg-gray-100 border-[1px] border-black">
+                                    <input id="vue-checkbox" type="checkbox" name="chosenExtra" value="30" class="w-4 h-4  bg-gray-100 border-[1px] border-black">
                                     <label for="vue-checkbox" class="py-3 ml-2 w-full text-sm font-medium text-black ">Massage</label>
                                 </div>
                             </li>
                             <li class="w-full border-b border-[1px] border-black">
                                 <div class="flex items-center pl-3">
-                                    <input id="react-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100  border-[1px] border-black">
+                                    <input id="react-checkbox" type="checkbox" name="chosenExtra" value="40" class="w-4 h-4 text-blue-600 bg-gray-100  border-[1px] border-black">
                                     <label for="react-checkbox" class="py-3 ml-2 w-full text-sm font-medium text-gray-900">Spa</label>
                                 </div>
                             </li>
                             <li class="w-full border-b border-[1px] border-black">
                                 <div class="flex items-center pl-3">
-                                    <input id="angular-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-[1px] border-black">
+                                    <input id="angular-checkbox" type="checkbox" name="chosenExtra" value="500" class="w-4 h-4 text-blue-600 bg-gray-100 border-[1px] border-black">
                                     <label for="angular-checkbox" class="py-3 ml-2 w-full text-sm font-medium text-black">Diner</label>
                                 </div>
                             </li>
                             <li class="w-full border-b border-[1px] border-black">
                                 <div class="flex items-center pl-3">
-                                    <input id="laravel-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-[1px] border-black">
+                                    <input id="laravel-checkbox" type="checkbox" name="chosenExtra" value="90" class="w-4 h-4 text-blue-600 bg-gray-100 border-[1px] border-black">
                                     <label for="laravel-checkbox" class="py-3 ml-2 w-full text-sm font-medium">excursion</label>
                                 </div>
                             </li>
                             <li class="w-full border-b border-[1px] border-black">
                                 <div class="flex items-center pl-3">
-                                    <input id="laravel-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-[1px] border-black">
+                                    <input id="laravel-checkbox" type="checkbox" name="chosenExtra" value="10" class="w-4 h-4 text-blue-600 bg-gray-100 border-[1px] border-black">
                                     <label for="laravel-checkbox" class="py-3 ml-2 w-full text-sm font-medium">excursion</label>
                                 </div>
                             </li>
                             <li class="w-full border-b border-[1px] border-black">
                                 <div class="flex items-center pl-3">
-                                    <input id="laravel-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-[1px] border-black">
+                                    <input id="laravel-checkbox" type="checkbox" name="chosenExtra" value="9" class="w-4 h-4 text-blue-600 bg-gray-100 border-[1px] border-black">
                                     <label for="laravel-checkbox" class="py-3 ml-2 w-full text-sm font-medium">excursion</label>
                                 </div>
                             </li>
