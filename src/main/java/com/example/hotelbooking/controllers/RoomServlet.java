@@ -13,7 +13,13 @@ import java.sql.SQLException;
 public class RoomServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
+        //get all room from chambresDao
+        ChambresDao chambresDao = new ChambresDao();
+        try {
+            request.setAttribute("rooms", chambresDao.getAll());
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
     }
 
     @Override
@@ -21,9 +27,9 @@ public class RoomServlet extends HttpServlet {
         String roomType = request.getParameter("roomType");
         String price = request.getParameter("price");
         String promotion = request.getParameter("promotion");
-        String status = request.getParameter("status");
+        String[] images = request.getParameterValues("images");
         //create a new room object
-        Chambre chambre = new Chambre(roomType,price,promotion,status);
+        Chambre chambre = new Chambre(roomType, price, promotion, "Disponible", images);
         //insert the room to the database
         try {
             ChambresDao chambresDao = new ChambresDao();
@@ -33,5 +39,16 @@ public class RoomServlet extends HttpServlet {
         }
         //redirect to the home page
         response.sendRedirect("pages/managerDashboard.jsp");
+
     }
+
+//    @Override
+//    protected void doPut(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+//        super.doPut(req, resp);
+//    }
+//
+//    @Override
+//    protected void doDelete(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+//        super.doDelete(req, resp);
+//    }
 }

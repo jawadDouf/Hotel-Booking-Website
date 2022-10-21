@@ -28,7 +28,7 @@ public class AuthServlet extends HttpServlet {
         if (manager != null){
             HttpSession session = request.getSession();
             session.setAttribute("manager",manager);
-            response.sendRedirect("pages/home.jsp");
+            response.sendRedirect("pages/managerDashboard.jsp");
         }
         else {
             response.sendRedirect("pages/login.jsp");

@@ -12,15 +12,17 @@ public class Chambre {
     private double prix;
     private double promotions;
     private Status status;
+    private String[] images;
 
-    public Chambre(String type, String prix, String promotions, String status) {
+    public Chambre(String type, String prix, String promotions, String status, String[] images) {
         this.type = RoomType.valueOf(type);
         this.prix = Double.parseDouble(prix);
         this.promotions = Double.parseDouble(promotions);
         this.status = Status.valueOf(status);
-
+        this.images = images;
     }
-
+    public Chambre() {
+    }
 
 
 
@@ -67,4 +69,10 @@ public class Chambre {
     }
 
 
+    public String[] getImages() {
+        return images;
+    }
+
+    public void setImages(String images) {
+    }
 }

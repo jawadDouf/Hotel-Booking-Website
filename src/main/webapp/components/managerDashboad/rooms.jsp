@@ -43,10 +43,11 @@
                             <input type="text" class="mt-4 form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
                                    id="exampleFormControlInput3" placeholder="Promotion" name="promotion"/>
                         </div>
+
                         <div class="mb-8">
                             <label for="exampleFormControlInput4" >Status</label>
-                            <input type="text" class="mt-4 form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
-                                   id="exampleFormControlInput4" placeholder="Status" name="status"/>
+                            <input name="images" type="file" id="file" class="mt-4 form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+                                   id="exampleFormControlInput4" multiple/>
                         </div>
 
                     </div>
@@ -102,7 +103,7 @@
                     </div>
                     <div class="">
 <%--                        button to add room and onckick it will open a modal--%>
-                        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full" onclick="popupOn()">Add Room</button>
+                        <button class="inline-block px-6 py-2 border-2 border-gray-800 text-gray-800 font-medium text-xs leading-tight uppercase rounded-full hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out" onclick="popupOn()">Add Room</button>
                     </div>
                 </div>
             </div>
@@ -146,10 +147,6 @@
                                 </td>
 
                                 <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-200 text-sm leading-5 text-gray-500">Owner</td>
-
-                                <td class="px-6 py-4 whitespace-no-wrap text-right border-b border-gray-200 text-sm leading-5 font-medium">
-                                    <a href="#" class="text-indigo-600 hover:text-indigo-900">Edit</a>
-                                </td>
                             </tr>
                             <tr>
                                 <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-200">
@@ -175,10 +172,6 @@
                                 </td>
 
                                 <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-200 text-sm leading-5 text-gray-500">Owner</td>
-
-                                <td class="px-6 py-4 whitespace-no-wrap text-right border-b border-gray-200 text-sm leading-5 font-medium">
-                                    <a href="#" class="text-indigo-600 hover:text-indigo-900">Edit</a>
-                                </td>
                             </tr>
 
                             </tbody>
